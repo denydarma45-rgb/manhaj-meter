@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ManhajMeter - Tes Gaya Berpikir dalam Beragama</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- SECTION 1: Welcome Screen -->
+      <section id="welcome-screen" class="screen">
+        <div class="container">
+          <h1>ManhajMeter</h1>
+          <p class="subtitle">Tes Gaya Berpikir dalam Beragama</p>
+          <p class="description">
+            Kuisioner ini dirancang untuk memetakan kecenderungan pendekatan Anda
+            dalam memahami agama Islam.
+          </p>
+          <div class="info-box">
+            <ul>
+              <li>20 Pertanyaan</li>
+              <li>Durasi sekitar 5 menit</li>
+              <li>Tidak ada jawaban benar atau salah</li>
+              <li>Pilih jawaban yang paling sesuai dengan diri Anda</li>
+            </ul>
+          </div>
+          <button id="start-btn" type="button">Mulai Tes</button>
+        </div>
+      </section>
+
+      <!-- SECTION 2: Quiz Screen -->
+      <section id="quiz-screen" class="screen hidden">
+        <div class="container">
+          <div id="progress-bar" class="progress-bar"></div>
+          <div class="quiz-header">
+            <span id="question-number" class="question-number">Soal 1 dari 20</span>
+            <h2 id="question-title" class="question-title">Judul Soal</h2>
+          </div>
+          <div id="choices" class="choices"></div>
+          <div class="quiz-navigation">
+            <button id="prev-btn" type="button">← Sebelumnya</button>
+            <button id="next-btn" type="button">Berikutnya →</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: Result Screen -->
+      <section id="result-screen" class="screen hidden">
+        <div class="container">
+          <h1>Hasil Tes</h1>
+          <p id="profile-name" class="profile-name">Nama Profil</p>
+          <div id="organization-result" class="organization-result"></div>
+          <div id="description" class="description"></div>
+          <div class="result-actions">
+            <button id="restart-btn" type="button">Ulangi Tes</button>
+            <button id="share-btn" type="button">Bagikan Hasil</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
